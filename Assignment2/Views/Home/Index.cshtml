@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Assignment2.Models.Test>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Index</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SubjectName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TheoryMark)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PracticeMark)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssignmentMark)
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubjectName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TheoryMark)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PracticeMark)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssignmentMark)
+            </td>
+            
+        </tr>
+        }
+    </tbody>
+</table>
